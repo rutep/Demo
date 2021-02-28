@@ -53,6 +53,7 @@ func _integrate_forces(s):
 	
 	var new_anim = anim
 	var new_siding_left = siding_left
+	var yes = anim
 	
 	# Get the controls.
 	var move_left = Input.is_action_pressed("move_left")
@@ -182,7 +183,7 @@ func _integrate_forces(s):
 	# Change animation.
 	if new_anim != anim:
 		anim = new_anim
-		($AnimationPlayer as AnimationPlayer).play(anim)
+		($AnimatedSprite as AnimatedSprite).play(anim)
 	
 	shooting = shoot
 	

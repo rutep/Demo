@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plank.png-d70731fc82f225d8353819786c2ed28a.stex"
+path="res://.import/154995698_492262008434093_907182701013671480_n.png-c3d5cfd68ed6de0c6e5c7075a649236d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/plank.png"
-dest_files=[ "res://.import/plank.png-d70731fc82f225d8353819786c2ed28a.stex" ]
+source_file="res://player/assets/jumping/154995698_492262008434093_907182701013671480_n.png"
+dest_files=[ "res://.import/154995698_492262008434093_907182701013671480_n.png-c3d5cfd68ed6de0c6e5c7075a649236d.stex" ]
 
 [params]
 

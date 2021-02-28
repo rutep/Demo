@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://player/robot_demo.png" type="Texture" id=2]
@@ -9,6 +9,19 @@
 [ext_resource path="res://player/osb_fire.png" type="Texture" id=7]
 [ext_resource path="res://audio/sound_shoot.wav" type="AudioStream" id=8]
 [ext_resource path="res://audio/sound_jump.wav" type="AudioStream" id=9]
+[ext_resource path="res://player/assets/jumping/155324063_447584196554901_8652221012610468205_n.png" type="Texture" id=10]
+[ext_resource path="res://player/assets/jumping/154919778_842653559675815_2262461549553348071_n.png" type="Texture" id=12]
+[ext_resource path="res://player/assets/run/155149752_1083425348828880_8649323383810311766_n.png" type="Texture" id=13]
+[ext_resource path="res://player/assets/idle/154976254_201633098408751_5353466634606227561_n.png" type="Texture" id=14]
+[ext_resource path="res://player/assets/run/155160869_217795130089411_7861086554110396978_n.png" type="Texture" id=15]
+[ext_resource path="res://player/assets/run/155192579_501739994294126_3764817151627962034_n.png" type="Texture" id=16]
+[ext_resource path="res://player/assets/run/155270356_651492448957078_5424289392457930817_n.png" type="Texture" id=17]
+[ext_resource path="res://player/assets/run/155235816_715897165713195_5045107221710577820_n.png" type="Texture" id=18]
+[ext_resource path="res://player/assets/run/155278630_945749492631554_8035862372089007927_n.png" type="Texture" id=19]
+[ext_resource path="res://player/assets/idle/154879545_470978487248906_2299532656723154085_n.png" type="Texture" id=20]
+[ext_resource path="res://player/assets/run/155294258_1071886679983460_3697329860708118847_n.png" type="Texture" id=21]
+[ext_resource path="res://player/assets/jumping/154995698_492262008434093_907182701013671480_n.png" type="Texture" id=22]
+[ext_resource path="res://player/assets/155344581_1139424309861443_761439697129157725_n.png" type="Texture" id=23]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -31,179 +44,37 @@ orbit_velocity_random = 0.0
 linear_accel = 100.0
 color_ramp = SubResource( 3 )
 
-[sub_resource type="Animation" id=5]
-length = 0.01
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 22 ]
-}
-
-[sub_resource type="Animation" id=6]
-length = 0.01
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 21 ]
-}
-
-[sub_resource type="Animation" id=7]
-length = 0.5
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 26 ]
-}
-
-[sub_resource type="Animation" id=8]
-length = 7.0
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.25, 1.5, 2, 4.5, 4.75, 5, 5.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 16, 17, 18, 16, 19, 20, 19, 16 ]
-}
-
-[sub_resource type="Animation" id=9]
-length = 0.5
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 25 ]
-}
-
-[sub_resource type="Animation" id=10]
-length = 0.5
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 23, 24, 23 ]
-}
-
-[sub_resource type="Animation" id=11]
-length = 0.5
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 26 ]
-}
-
-[sub_resource type="Animation" id=12]
-length = 1.25
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1, 1.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 0 ]
-}
-
-[sub_resource type="Animation" id=13]
-length = 1.25
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1, 1.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 5, 6, 7, 8, 9, 5 ]
-}
-
-[sub_resource type="Animation" id=14]
-length = 1.25
-loop = true
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1, 1.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 10, 11, 12, 13, 14, 5 ]
-}
-
-[sub_resource type="RayShape2D" id=15]
+[sub_resource type="RayShape2D" id=16]
 custom_solver_bias = 0.5
-length = 18.0
+length = 58.855
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "falling",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 10 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "jumping",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "idle_weapon",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
 
 [node name="Player" type="RigidBody2D"]
 mode = 2
@@ -217,6 +88,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 16
+frame = 22
 
 [node name="Smoke" type="Particles2D" parent="Sprite"]
 self_modulate = Color( 1, 1, 1, 0.26702 )
@@ -230,18 +102,6 @@ local_coords = false
 process_material = SubResource( 4 )
 texture = ExtResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/crouch = SubResource( 5 )
-anims/falling = SubResource( 6 )
-anims/falling_weapon = SubResource( 7 )
-anims/idle = SubResource( 8 )
-anims/idle_weapon = SubResource( 9 )
-anims/jumping = SubResource( 10 )
-anims/jumping_weapon = SubResource( 11 )
-anims/run = SubResource( 12 )
-anims/run_weapon = SubResource( 13 )
-anims/standing_weapon_ready = SubResource( 14 )
-
 [node name="Camera" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.5, 0.5 )
@@ -253,9 +113,10 @@ position = Vector2( 15, 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.15, -6 )
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = -0.0139244
 polygon = PoolVector2Array( -0.138, 8.25, -10, -12, 11, -12 )
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -296,3 +157,8 @@ stream = ExtResource( 8 )
 
 [node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.05, 0.05 )
+frames = SubResource( 17 )
+animation = "falling 1"

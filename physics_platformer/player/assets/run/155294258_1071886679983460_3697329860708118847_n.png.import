@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scroll_bg_cloud_2.png-869806dcc546591f3d754e3b845c61c9.stex"
+path="res://.import/155294258_1071886679983460_3697329860708118847_n.png-39ceb831fae3d9a343004be07bb109cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/scroll_bg_cloud_2.png"
-dest_files=[ "res://.import/scroll_bg_cloud_2.png-869806dcc546591f3d754e3b845c61c9.stex" ]
+source_file="res://player/assets/run/155294258_1071886679983460_3697329860708118847_n.png"
+dest_files=[ "res://.import/155294258_1071886679983460_3697329860708118847_n.png-39ceb831fae3d9a343004be07bb109cd.stex" ]
 
 [params]
 
