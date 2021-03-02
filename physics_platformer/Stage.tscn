@@ -173,7 +173,7 @@ position = Vector2( 1201.4, 424.76 )
 position = Vector2( 463.849, 560.405 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 125.842, 591.665 )
+position = Vector2( 127.842, 593.665 )
 physics_material_override = SubResource( 1 )
 
 [node name="Enemies" type="Node2D" parent="."]

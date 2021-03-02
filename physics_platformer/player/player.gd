@@ -174,9 +174,11 @@ func _integrate_forces(s):
 	# Update siding.
 	if new_siding_left != siding_left:
 		if new_siding_left:
-			($Sprite as Sprite).scale.x = -1
+			($AnimatedSprite as AnimatedSprite).scale.x = -0.03
+			($AnimatedSprite as AnimatedSprite).scale.y = 0.03
 		else:
-			($Sprite as Sprite).scale.x = 1
+			($AnimatedSprite as AnimatedSprite).scale.x = 0.03
+			($AnimatedSprite as AnimatedSprite).scale.y = 0.03
 		
 		siding_left = new_siding_left
 	
@@ -184,7 +186,7 @@ func _integrate_forces(s):
 	if new_anim != anim:
 		anim = new_anim
 		($AnimatedSprite as AnimatedSprite).play(anim)
-	
+		
 	shooting = shoot
 	
 	# Apply floor velocity.
