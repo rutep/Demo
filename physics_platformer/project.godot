@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://player/player.gd"
+}, {
+"base": "RigidBody2D",
+"class": "StationaryEnemy",
+"language": "GDScript",
+"path": "res://enemy/stationaryEnemy.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
 "Coin": "",
 "Enemy": "",
 "MovingPlatform": "",
-"Player": ""
+"Player": "",
+"StationaryEnemy": ""
 }
 
 [application]
@@ -49,7 +55,7 @@ config/description="This demo uses RigidBody2D for the player and enemies. These
 character controllers are more powerful than KinematicBody2D,
 but can be more difficult to handle, as they require
 manual modification of the RigidBody velocity."
-run/main_scene="res://Stage.tscn"
+run/main_scene="res://StageDemo.tscn"
 config/icon="res://icon.png"
 
 [debug]

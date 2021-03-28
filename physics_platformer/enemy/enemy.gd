@@ -38,6 +38,8 @@ func _integrate_forces(s):
 					# enqueue call
 					call_deferred("_bullet_collider", cc, s, dp)
 					break
+				if cc.name == "Player":
+					call_deferred("player_collider", cc, s, dp)
 			
 			if dp.x > 0.9:
 				wall_side = 1.0
@@ -86,3 +88,10 @@ func _bullet_collider(cc, s, dp):
 	physics_material_override.friction = 1
 	cc.disable()
 	($SoundHit as AudioStreamPlayer2D).play()
+
+func player_collider(cc, s, dp):
+	# Kill enemy by jumping on it
+	if(dp.x < 0):
+		mode = MODE_RIGID
+		state = State.DYING	
+

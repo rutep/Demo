@@ -222,5 +222,6 @@ func _shot_bullet():
 
 func _spawn_enemy_above():
 	var e = Enemy.instance()
-	e.position = position + 50 * Vector2.UP
+	e.position = position + 100 * Vector2.UP
 	get_parent().add_child(e)
+

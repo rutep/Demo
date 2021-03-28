@@ -156,3 +156,6 @@ text = "This scene serves as a tool for editing the tileset.
 This will save a tileset. Saving over it will merge your changes.
 
 Finally, the saved tileset resource (tileset.tres in this case), can be opened to be used into a TileMap node for editing a tile map."
+__meta__ = {
+"_edit_use_anchors_": false
+}
